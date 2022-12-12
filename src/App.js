@@ -1,11 +1,10 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
-
+import {Navigation} from './navigation';
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text>Find image</Text>
-    </SafeAreaView>
+    <>
+      <Navigation />
+    </>
   );
 };
 
