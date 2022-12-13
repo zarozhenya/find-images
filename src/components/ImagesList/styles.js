@@ -17,14 +17,19 @@ export const styles = EStyleSheet.create({
     borderRadius: 8,
     padding: 8,
   },
+  itemText: {
+    fontFamily: '$textFamily',
+    color: '$primaryColor',
+    fontSize: '$primaryFontSize',
+  },
   itemData: {
     display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
   },
   image: {
     width: 60,
     height: 60,
     marginRight: 20,
-    alignItems: 'center',
   },
 });
