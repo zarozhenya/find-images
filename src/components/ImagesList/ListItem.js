@@ -9,12 +9,13 @@ import {styles} from './styles';
 export const ListItem = ({item, index}) => {
   const {length} = useSelector(selectItems);
   const navigation = useNavigation();
+
   return (
     <TouchableOpacity
       style={
         index !== length - 1 ? [styles.item, {marginBottom: 8}] : styles.item
       }
-      onPress={() => navigation.navigate('Details')}>
+      onPress={() => navigation.navigate('Details', {itemId: item.id})}>
       <View style={styles.itemData}>
         <Image source={{uri: item.largeImageURL}} style={styles.image} />
         <View>
