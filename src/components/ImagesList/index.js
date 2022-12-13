@@ -7,7 +7,6 @@ import {ListItem} from './ListItem';
 
 export const ImagesList = () => {
   const items = useSelector(selectItems);
-  console.log(items[0]);
   return (
     <FlatList
       data={items}

@@ -8,7 +8,7 @@ export const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.flex}>
       <View style={styles.container}>
-        <Input style={[{marginBottom: 10}]} />
+        <Input style={[{marginBottom: 16}]} />
         <ImagesList />
       </View>
     </SafeAreaView>

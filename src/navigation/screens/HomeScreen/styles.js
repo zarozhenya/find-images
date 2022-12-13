@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   container: {
+    flex: 1,
     padding: 16,
   },
 });
