@@ -1,6 +1,13 @@
 import {useRoute} from '@react-navigation/native';
 import React from 'react';
-import {Text, View, Image, TouchableOpacity, Linking} from 'react-native';
+import {
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Linking,
+  Alert,
+} from 'react-native';
 import {useSelector} from 'react-redux';
 import {selectItems} from '../../redux/imagesSlice';
 import {styles} from './styles';
@@ -14,7 +21,16 @@ export const ImageData = () => {
   const currentItem = items.find(({id}) => id === itemId);
   return (
     <TouchableOpacity
-      onPress={() => Linking.openURL(currentItem.pageURL)}
+      onPress={() =>
+        Alert.alert('Do you want to go to the image page?', undefined, [
+          {text: 'No', style: 'destructive'},
+          {
+            text: 'Yes',
+            style: 'default',
+            onPress: () => Linking.openURL(currentItem.pageURL),
+          },
+        ])
+      }
       style={styles.wrapper}>
       <Image source={{uri: currentItem.largeImageURL}} style={styles.image} />
       <View style={styles.dataContainer}>

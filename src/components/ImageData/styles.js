@@ -6,6 +6,9 @@ export const styles = EStyleSheet.create({
     color: '$primaryColor',
     fontSize: '$primaryFontSize',
   },
+  wrapper: {
+    marginBottom: 16,
+  },
   dataContainer: {
     paddingRight: 8,
     paddingLeft: 8,
