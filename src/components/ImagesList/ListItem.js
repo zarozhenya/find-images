@@ -1,9 +1,10 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Image, Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import Logo from '../../assets/svg/arrow.svg';
 import {selectItems} from '../../redux/imagesSlice';
+import {ProgressiveImage} from '../ProgressiveImage';
 import {styles} from './styles';
 
 export const ListItem = ({item, index}) => {
@@ -17,8 +18,8 @@ export const ListItem = ({item, index}) => {
       }
       onPress={() => navigation.navigate('Details', {itemId: item.id})}>
       <View style={styles.itemData}>
-        <Image source={{uri: item.largeImageURL}} style={styles.image} />
-        <View>
+        <ProgressiveImage url={item.largeImageURL} style={styles.image} />
+        <View style={styles.textContainer}>
           <Text style={styles.itemText}>Likes: {item.likes}</Text>
           <Text style={styles.itemText}>Comments: {item.comments}</Text>
           <Text style={styles.itemText}>Downloads: {item.downloads}</Text>

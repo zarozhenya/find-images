@@ -5,12 +5,12 @@ export const styles = EStyleSheet.create({
     fontFamily: '$textFamily',
     color: '$primaryColor',
     fontSize: '$primaryFontSize',
+    marginLeft: 10,
   },
   image: {
     width: 60,
     height: 60,
     borderRadius: 30,
-    marginRight: 10,
   },
   container: {
     display: 'flex',

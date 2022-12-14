@@ -1,15 +1,9 @@
 import {useRoute} from '@react-navigation/native';
 import React from 'react';
-import {
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-  Linking,
-  Alert,
-} from 'react-native';
+import {Text, View, TouchableOpacity, Linking, Alert} from 'react-native';
 import {useSelector} from 'react-redux';
 import {selectItems} from '../../redux/imagesSlice';
+import {ProgressiveImage} from '../ProgressiveImage';
 import {styles} from './styles';
 import {TagItem} from './TagItem';
 
@@ -32,7 +26,7 @@ export const ImageData = () => {
         ])
       }
       style={styles.wrapper}>
-      <Image source={{uri: currentItem.largeImageURL}} style={styles.image} />
+      <ProgressiveImage url={currentItem.largeImageURL} style={styles.image} />
       <View style={styles.dataContainer}>
         <View style={[styles.container, styles.containerBorder]}>
           <Text style={styles.text}>Tags:</Text>

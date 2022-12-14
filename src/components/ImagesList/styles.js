@@ -30,6 +30,8 @@ export const styles = EStyleSheet.create({
   image: {
     width: 60,
     height: 60,
-    marginRight: 20,
+  },
+  textContainer: {
+    marginLeft: 20,
   },
 });
