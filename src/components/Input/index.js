@@ -12,7 +12,8 @@ export const Input = ({style}) => {
   return (
     <View>
       <TextInput
-        placeholder="Enter the name"
+        placeholder="Enter the query"
+        placeholderTextColor="#D3D3D3"
         style={[styles.field, ...style]}
         onChangeText={useDebouncedCallback(text => {
           dispatch(setQuery(text));
