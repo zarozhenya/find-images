@@ -8,16 +8,13 @@ export const styles = EStyleSheet.create({
   },
   wrapper: {
     marginBottom: 16,
+    borderWidth: 0.5,
+    borderColor: '$primaryColor',
+    borderRadius: 8,
   },
   dataContainer: {
     paddingRight: 8,
     paddingLeft: 8,
-    borderRightWidth: 0.5,
-    borderLeftWidth: 0.5,
-    borderBottomWidth: 0.5,
-    borderColor: '$primaryColor',
-    borderBottomLeftRadius: 8,
-    borderBottomRightRadius: 8,
   },
   image: {
     width: '100%',
