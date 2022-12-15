@@ -6,6 +6,7 @@ import {selectItems} from '../../redux/imagesSlice';
 import {styles} from './styles';
 import Arrow from '../../assets/svg/arrow.svg';
 import {ProgressiveImage} from '../ProgressiveImage';
+import {Images} from '../../assets/images';
 
 export const AuthorData = () => {
   const {
@@ -16,7 +17,11 @@ export const AuthorData = () => {
   return (
     <View style={styles.container}>
       <View style={styles.userContainer}>
-        <ProgressiveImage url={userImageURL} style={styles.image} />
+        <ProgressiveImage
+          url={userImageURL}
+          style={styles.image}
+          placeholder={Images.userImage}
+        />
         <Text style={styles.text}>{user}</Text>
       </View>
       <Arrow fill="#303030" width={24} height={24} />
