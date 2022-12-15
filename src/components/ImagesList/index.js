@@ -17,7 +17,6 @@ export const ImagesList = () => {
       data={items}
       ListEmptyComponent={EmptyComponent}
       renderItem={({item, index}) => <ListItem item={item} index={index} />}
-      onEndReached={() => dispatch(fetchImages())}
     />
   );
 };
