@@ -17,11 +17,13 @@ const imagesSlice = createSlice({
     },
     setQuery: (state, {payload}) => {
       state.query = payload;
+      state.items = [];
     },
   },
   extraReducers: builder =>
     builder.addCase(fetchImages.fulfilled, (state, {payload}) => {
-      state.items = payload;
+      state.items.push(...payload);
+      state.page += 1;
     }),
 });
 
