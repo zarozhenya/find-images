@@ -19,7 +19,7 @@ export const ProgressiveImage = ({
       />
       {loading && (
         <View style={styles.loader}>
-          <ActivityIndicator />
+          <ActivityIndicator color="#D3D3D3" />
         </View>
       )}
     </View>

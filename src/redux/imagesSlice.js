@@ -9,19 +9,15 @@ const imagesSlice = createSlice({
     items: [],
   },
   reducers: {
-    increment: state => {
-      state.page = state.page + 1;
-    },
-    decrement: state => {
-      state.page -= 1;
-    },
     setQuery: (state, {payload}) => {
       state.query = payload;
+      state.items = [];
     },
   },
   extraReducers: builder =>
     builder.addCase(fetchImages.fulfilled, (state, {payload}) => {
-      state.items = payload;
+      state.items.push(...payload);
+      state.page += 1;
     }),
 });
 
