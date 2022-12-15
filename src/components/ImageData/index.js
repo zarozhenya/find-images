@@ -1,4 +1,4 @@
-import {useRoute} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import React from 'react';
 import {Text, View, TouchableOpacity, Linking, Alert} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -6,8 +6,8 @@ import {selectItems} from '../../redux/imagesSlice';
 import {ProgressiveImage} from '../ProgressiveImage';
 import {styles} from './styles';
 import {TagItem} from './TagItem';
-
 export const ImageData = () => {
+  const navigation = useNavigation();
   const {
     params: {itemId},
   } = useRoute();
@@ -15,16 +15,9 @@ export const ImageData = () => {
   const currentItem = items.find(({id}) => id === itemId);
   return (
     <TouchableOpacity
-      onPress={() =>
-        Alert.alert('Do you want to go to the image page?', undefined, [
-          {text: 'No', style: 'destructive'},
-          {
-            text: 'Yes',
-            style: 'default',
-            onPress: () => Linking.openURL(currentItem.pageURL),
-          },
-        ])
-      }
+      onPress={() => {
+        navigation.navigate('Web', {url: currentItem.pageURL});
+      }}
       style={styles.wrapper}>
       <ProgressiveImage url={currentItem.largeImageURL} style={styles.image} />
       <View style={styles.dataContainer}>
