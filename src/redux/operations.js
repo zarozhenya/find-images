@@ -9,7 +9,6 @@ export const fetchImages = createAsyncThunk(
       key: Config.API_KEY,
       q: state.images.query,
       image_type: 'photo',
-      page: state.images.page,
     });
     const data = await fetch(`${Config.API_URL}?${params}`).then(res =>
       res.json(),
