@@ -1,6 +1,6 @@
 import {useNavigation, useRoute} from '@react-navigation/native';
 import React from 'react';
-import {Text, View, TouchableOpacity, Linking, Alert} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import {useSelector} from 'react-redux';
 import {selectItems} from '../../redux/imagesSlice';
 import {ProgressiveImage} from '../ProgressiveImage';
