@@ -4,7 +4,6 @@ import {useRoute} from '@react-navigation/native';
 import {useSelector} from 'react-redux';
 import {selectItems} from '../../redux/imagesSlice';
 import {styles} from './styles';
-import Arrow from '../../assets/svg/arrow.svg';
 import {ProgressiveImage} from '../ProgressiveImage';
 import {Images} from '../../assets/images';
 
