@@ -16,15 +16,12 @@ export const AuthorData = () => {
   const {userImageURL, user} = items.find(({id}) => id === itemId);
   return (
     <View style={styles.container}>
-      <View style={styles.userContainer}>
-        <ProgressiveImage
-          url={userImageURL}
-          style={styles.image}
-          placeholder={Images.userImage}
-        />
-        <Text style={styles.text}>{user}</Text>
-      </View>
-      <Arrow fill="#303030" width={24} height={24} />
+      <ProgressiveImage
+        url={userImageURL}
+        style={styles.image}
+        placeholder={Images.userImage}
+      />
+      <Text style={styles.text}>{user}</Text>
     </View>
   );
 };

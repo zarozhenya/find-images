@@ -16,15 +16,9 @@ export const styles = EStyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     borderWidth: 0.5,
     borderColor: '$primaryColor',
     borderRadius: 8,
     padding: 8,
-  },
-  userContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
   },
 });
