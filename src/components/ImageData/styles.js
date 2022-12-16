@@ -46,6 +46,6 @@ export const styles = EStyleSheet.create({
   list: {
     display: 'flex',
     flexDirection: 'row',
-    marginLeft: 8,
+    marginLeft: 18,
   },
 });
