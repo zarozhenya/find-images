@@ -7,20 +7,38 @@ export const styles = EStyleSheet.create({
     color: '$primaryColor',
     fontSize: '$primaryFontSize',
   },
+  darkText: {
+    color: '$primaryDarkColor',
+  },
+  lightText: {
+    color: '$primaryColor',
+  },
   item: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     borderWidth: 1,
-    borderColor: '$primaryColor',
+
     borderRadius: 8,
     padding: 8,
   },
+  darkItem: {
+    borderColor: '$primaryDarkColor',
+  },
+  lightItem: {
+    borderColor: '$primaryColor',
+  },
   itemText: {
     fontFamily: '$textFamily',
-    color: '$primaryColor',
+
     fontSize: '$primaryFontSize',
+  },
+  darkItemText: {
+    color: '$primaryDarkColor',
+  },
+  lightItemText: {
+    color: '$primaryColor',
   },
   itemData: {
     display: 'flex',

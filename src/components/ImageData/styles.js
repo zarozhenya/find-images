@@ -3,18 +3,35 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 export const styles = EStyleSheet.create({
   text: {
     fontFamily: '$textFamily',
-    color: '$primaryColor',
     fontSize: '$primaryFontSize',
+  },
+  darkText: {
+    color: '$primaryDarkColor',
+  },
+  lightText: {
+    color: '$primaryColor',
   },
   wrapper: {
     marginBottom: 16,
     borderWidth: 0.5,
-    borderColor: '$primaryColor',
     borderRadius: 8,
   },
+  darkWrapper: {
+    borderColor: '$primaryDarkColor',
+  },
+  lightWrapper: {
+    borderColor: '$primaryColor',
+  },
   dataContainer: {
+    borderTopWidth: 0.5,
     paddingRight: 8,
     paddingLeft: 8,
+  },
+  lightDataContainer: {
+    borderColor: '$primaryColor',
+  },
+  darkDataContainer: {
+    borderColor: '$primaryDarkColor',
   },
   image: {
     width: '100%',
@@ -29,9 +46,13 @@ export const styles = EStyleSheet.create({
     paddingTop: 8,
     paddingBottom: 8,
   },
-  containerBorder: {
+  lightContainerBorder: {
     borderBottomWidth: 0.5,
     borderBottomColor: '$primaryColor',
+  },
+  darkContainerBorder: {
+    borderBottomWidth: 0.5,
+    borderBottomColor: '$primaryDarkColor',
   },
   tagItem: {
     minWidth: 50,
@@ -40,7 +61,6 @@ export const styles = EStyleSheet.create({
     display: 'flex',
   },
   tagText: {
-    color: '#ffffff',
     textAlign: 'center',
   },
   list: {

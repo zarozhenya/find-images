@@ -8,6 +8,9 @@ import SplashScreen from 'react-native-splash-screen';
 EStyleSheet.build({
   $textFamily: 'Roboto-Regular',
   $primaryColor: '#303030',
+  $primaryBackground: '#ffffff',
+  $primaryDarkBackground: '#303030',
+  $primaryDarkColor: '#ffffff',
   $primaryFontSize: 16,
 });
 const App = () => {

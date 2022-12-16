@@ -1,16 +1,19 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
+import {SafeAreaView, useColorScheme, View} from 'react-native';
 import {AuthorData} from '../../../components/AuthorData';
 import {ImageData} from '../../../components/ImageData';
 import {styles} from './styles';
 
 export const DetailsScreen = () => {
+  const scheme = useColorScheme();
   return (
-    <SafeAreaView style={styles.flex}>
-      <View style={styles.container}>
-        <ImageData />
-        <AuthorData />
-      </View>
-    </SafeAreaView>
+    <View style={[styles.background, styles[scheme + 'Background']]}>
+      <SafeAreaView style={styles.flex}>
+        <View style={styles.container}>
+          <ImageData />
+          <AuthorData />
+        </View>
+      </SafeAreaView>
+    </View>
   );
 };

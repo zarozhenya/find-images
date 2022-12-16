@@ -3,9 +3,14 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 export const styles = EStyleSheet.create({
   text: {
     fontFamily: '$textFamily',
-    color: '$primaryColor',
     fontSize: '$primaryFontSize',
     marginLeft: 10,
+  },
+  darkText: {
+    color: '$primaryDarkColor',
+  },
+  lightText: {
+    color: '$primaryColor',
   },
   image: {
     width: 60,
@@ -17,8 +22,14 @@ export const styles = EStyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 0.5,
-    borderColor: '$primaryColor',
+
     borderRadius: 8,
     padding: 8,
+  },
+  darkContainer: {
+    borderColor: '$primaryDarkColor',
+  },
+  lightContainer: {
+    borderColor: '$primaryColor',
   },
 });

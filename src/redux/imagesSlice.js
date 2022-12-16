@@ -7,6 +7,7 @@ const imagesSlice = createSlice({
     query: '',
     page: 1,
     items: [],
+    loading: false,
   },
   reducers: {
     setQuery: (state, {payload}) => {
@@ -30,3 +31,5 @@ export const selectQuery = state => state.images.query;
 export const selectPage = state => state.images.page;
 
 export const selectItems = state => state.images.items;
+
+export const selectLoading = state => state.images.items;

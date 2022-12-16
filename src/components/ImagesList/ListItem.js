@@ -1,6 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, useColorScheme, View} from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import {useSelector} from 'react-redux';
 import Logo from '../../assets/svg/arrow.svg';
 import {selectItems} from '../../redux/imagesSlice';
@@ -10,22 +11,39 @@ import {styles} from './styles';
 export const ListItem = ({item, index}) => {
   const {length} = useSelector(selectItems);
   const navigation = useNavigation();
+  const scheme = useColorScheme();
 
   return (
     <TouchableOpacity
-      style={
-        index !== length - 1 ? [styles.item, {marginBottom: 8}] : styles.item
-      }
+      style={[
+        styles.item,
+        styles[scheme + 'Item'],
+        index !== length - 1 ? {marginBottom: 8} : null,
+      ]}
       onPress={() => navigation.navigate('Details', {itemId: item.id})}>
       <View style={styles.itemData}>
         <ProgressiveImage url={item.largeImageURL} style={styles.image} />
         <View style={styles.textContainer}>
-          <Text style={styles.itemText}>Likes: {item.likes}</Text>
-          <Text style={styles.itemText}>Comments: {item.comments}</Text>
-          <Text style={styles.itemText}>Downloads: {item.downloads}</Text>
+          <Text style={[styles.itemText, styles[scheme + 'ItemText']]}>
+            Likes: {item.likes}
+          </Text>
+          <Text style={[styles.itemText, styles[scheme + 'ItemText']]}>
+            Comments: {item.comments}
+          </Text>
+          <Text style={[styles.itemText, styles[scheme + 'ItemText']]}>
+            Downloads: {item.downloads}
+          </Text>
         </View>
       </View>
-      <Logo fill="#303030" width={24} height={24} />
+      <Logo
+        fill={
+          scheme === 'light'
+            ? EStyleSheet.value('$primaryColor')
+            : EStyleSheet.value('$primaryDarkColor')
+        }
+        width={24}
+        height={24}
+      />
     </TouchableOpacity>
   );
 };
